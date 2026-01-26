@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!--
+    head.ejs 包含 <head> 中的必要 meta、title 与样式引用
+    使用局部模板便于在多个页面之间复用
+  -->
+  <head>
+  <!-- 字符与响应视窗 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 页面标题：优先使用页面标题，否则使用站点标题 -->
+  <title></title>
+  <meta name="description" content="Calion&#39;s Corner">
+
+  <!-- 主题样式表：使用 Hexo 的 url helper 确保正确路径 -->
+  <link rel="stylesheet" href="/themes/mytheme/css/style.css">
+
+  <!-- 推荐字体：优先系统中文无衬线字体，若网络可用可替换为 Noto Sans SC 等 -->
+  <style>
+    /* 仅提供字体回退链，便于本地预览即能正常显示中文 */
+    :root{ --accent:#3273dc; --muted:#6b7280; }
+  </style>
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+    <!-- 页面容器，统一设置最大宽度与居中 -->
+    <div class="wrapper">
+      <!-- 头部（站点 title、导航） -->
+      <!-- 站点头部：包含站名、描述及导航 -->
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title"><a href="/"></a></h1>
+    <p class="site-subtitle">Calion&#39;s Corner</p>
+    <nav class="nav">
+      <a href="/">首页</a>
+      <a href="/archives/">归档</a>
+      <a href="/about/">关于</a>
+    </nav>
+  </div>
+</header>
+
+
+      <!-- 主内容区域，Hexo 会把页面内容注入到这里 -->
+      <main class="main">
+        <div class="content">
+          <!-- 模块化首页：Hero + 特色文章 + 最近更新 + 侧边栏 -->
+<!-- 首页 Hero 区块：大幅横幅 + 装饰图，用于突出站点信息 -->
+<section class="hero">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <h2 class="hero-title"></h2>
+      <p class="hero-sub"> Calion&#39;s Corner </p>
+      <p class="hero-actions">
+        <a class="btn-primary" href="/">开始阅读</a>
+        <a class="btn-ghost" href="/about/">关于作者</a>
+      </p>
+    </div>
+    <div class="hero-illustration">
+      <!-- 使用主题提供的 SVG 装饰 -->
+      <img src="/themes/mytheme/images/illustration.svg" alt="illustration">
+    </div>
+  </div>
+</section>
+
+
+<main class="main container">
+  <div class="content">
+    
+
+    <!-- 特色文章：显示最新的 3 篇为网格 -->
+    <section class="section">
+      <h3 class="section-title">精选文章</h3>
+      <div class="featured-grid">
+        
+          
+          
+            <article class="featured-card">
+              <a class="featured-link" href="/2026/01/26/hello-world/">
+                <div class="featured-thumb" aria-hidden="true"></div>
+                <div class="featured-body">
+                  <h4 class="featured-title">Hello World</h4>
+                  <p class="featured-excerpt">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex...</p>
+                </div>
+              </a>
+            </article>
+          
+        
+      </div>
+    </section>
+
+    <!-- 最近更新：按时间列出更多文章 -->
+    <section class="section">
+      <h3 class="section-title">最近更新</h3>
+      <div class="posts-list">
+        
+          
+            <article class="post-list-item">
+              <h4><a href="/2026/01/26/hello-world/">Hello World</a></h4>
+              <div class="meta"><time>2026-01-26</time></div>
+            </article>
+          
+        
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <section class="about">
+      <h3>关于作者</h3>
+      <p>Calion-lz</p>
+    </section>
+    <section>
+      <h3>快速访问</h3>
+      <nav class="mini-nav">
+        <a href="/archives/">归档</a>
+        <a href="/tags/">标签</a>
+        <a href="/about/">关于</a>
+      </nav>
+    </section>
+  </aside>
+</main>
+
+        </div>
+        <aside class="sidebar">
+          <!-- 侧边栏可放置关于、搜索、分类等小部件 -->
+          <section class="about">
+            <h3>关于作者</h3>
+            <p>Calion-lz</p>
+          </section>
+        </aside>
+      </main>
+
+      <!-- 页脚 -->
+      <!-- 页脚：简洁版权信息与作者链接 -->
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Calion-lz · 使用 mytheme</p>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

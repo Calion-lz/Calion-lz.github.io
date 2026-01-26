@@ -1,0 +1,147 @@
+/*
+  style.css - 主题样式（带详细注释）
+  说明：此文件放在 themes/mytheme/source/css/ 下，Hexo 默认会把它发布到 /css/style.css
+*/
+
+/* 基本重置 */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  line-height:1.75;color:#1f2937;background:#f8fafc;
+}
+
+/* 容器：居中并限制最大宽度 */
+.wrapper{max-width:1100px;margin:0 auto;padding:24px}
+.container{padding:12px}
+
+/* 头部 */
+.site-header{padding:18px 0;border-bottom:1px solid rgba(0,0,0,0.06);}
+.site-title{font-size:28px;margin-bottom:6px}
+.site-title a{color:var(--accent);text-decoration:none}
+.site-subtitle{color:var(--muted);font-size:14px}
+/*
+  style.css - 主题样式（带详细注释）
+  说明：此文件放在 themes/mytheme/source/css/ 下，Hexo 默认会把它发布到 /css/style.css
+*/
+
+/* 全局变量：便于快速修改配色 */
+:root{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#3273dc;
+  --accent-600:#2563eb;
+  --sidebar-bg:#fbfdff;
+  --border:rgba(15,23,42,0.06);
+}
+
+/* 基本重置 */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  line-height:1.75;color:#1f2937;background:var(--bg);
+}
+
+/* 容器：居中并限制最大宽度 */
+.wrapper{max-width:1100px;margin:0 auto;padding:24px}
+.container{padding:12px}
+
+/* 头部 */
+.site-header{
+  padding:26px 0 18px 0;
+  background:linear-gradient(90deg, rgba(50,115,220,0.08), rgba(38,132,255,0.03));
+  border-bottom:1px solid var(--border);
+  margin-bottom:6px;
+}
+.site-title{font-size:30px;margin-bottom:6px}
+.site-title a{color:var(--accent);text-decoration:none}
+.site-subtitle{color:var(--muted);font-size:14px}
+.nav{margin-top:12px}
+.nav a{margin-right:12px;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px}
+.nav a:hover{color:#fff;background:var(--accent-600)}
+
+/* 主体布局：文章内容 + 侧边栏 */
+.main{display:flex;gap:28px;margin-top:20px;align-items:flex-start}
+.content{flex:1}
+.sidebar{width:300px}
+
+/* 侧边栏卡片 */
+.sidebar .about, .sidebar section{background:var(--sidebar-bg);padding:14px;border-radius:10px;border:1px solid var(--border);box-shadow:0 6px 18px rgba(17,24,39,0.02);margin-bottom:16px}
+
+/* 文章卡片 */
+.post-card{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,0.04);margin-bottom:18px}
+.post-title{font-size:20px;margin-bottom:6px}
+.post-title a{color:#0f172a;text-decoration:none}
+.post-meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+.post-excerpt{color:#374151}
+.read-more{color:var(--accent);text-decoration:none}
+
+/* 标签徽章 */
+.tag-badge{display:inline-block;padding:4px 8px;margin:0 8px 8px 0;background:rgba(50,115,220,0.08);color:var(--accent);border-radius:999px;font-size:13px;text-decoration:none}
+.tag-badge:hover{background:var(--accent);color:#fff}
+
+/* 文章页面 */
+.post{background:var(--card);padding:26px;border-radius:12px;box-shadow:0 12px 40px rgba(15,23,42,0.05)}
+.post-header{margin-bottom:18px}
+.post-title{font-size:30px}
+.post-content{color:#0f172a}
+.post-footer{margin-top:24px;color:var(--muted);font-size:14px}
+
+/* 页脚 */
+.site-footer{margin-top:32px;padding:18px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+/* 小屏时侧边栏折叠 */
+@media (max-width:900px){
+  .main{flex-direction:column}
+  .sidebar{width:100%}
+}
+
+/* 小细节：高亮链接 */
+a{color:var(--accent)}
+
+/* 代码块样式（简单美化） */
+pre{background:#0f172a;color:#f8fafc;padding:12px;border-radius:6px;overflow:auto}
+code{background:#f3f4f6;padding:2px 6px;border-radius:4px}
+
+/* blockquote */
+blockquote{border-left:4px solid rgba(50,115,220,0.12);padding:10px 14px;margin:12px 0;background:rgba(50,115,220,0.03);border-radius:6px}
+
+/* Hero 横幅 */
+.hero{padding:36px 0;background:linear-gradient(180deg, rgba(50,115,220,0.04), transparent);margin-bottom:18px}
+.hero-inner{display:flex;align-items:center;gap:24px}
+.hero-content{flex:1}
+.hero-title{font-size:36px;margin-bottom:8px}
+.hero-sub{color:var(--muted);font-size:16px;margin-bottom:14px}
+.hero-actions .btn-primary{background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;margin-right:8px}
+.hero-actions .btn-ghost{background:transparent;border:1px solid var(--border);padding:8px 14px;border-radius:8px;text-decoration:none;color:var(--muted)}
+.hero-illustration img{width:220px;height:auto;display:block}
+
+/* Section 标题 */
+.section{margin-bottom:22px}
+.section-title{font-size:18px;margin-bottom:12px;color:#0f172a}
+
+/* 特色网格布局 */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.featured-card{border-radius:12px;overflow:hidden}
+.featured-link{display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit}
+.featured-thumb{height:120px;background:linear-gradient(135deg, rgba(50,115,220,0.12), rgba(38,132,255,0.06));border-bottom:1px solid var(--border)}
+.featured-body{padding:12px}
+.featured-title{font-size:16px;margin-bottom:6px}
+.featured-excerpt{color:var(--muted);font-size:13px}
+
+/* 列表样式 */
+.posts-list .post-list-item{padding:10px 0;border-bottom:1px dashed var(--border)}
+.posts-list .post-list-item h4{margin-bottom:6px}
+.posts-list .meta{color:var(--muted);font-size:13px}
+
+/* 小屏适配 */
+@media (max-width:1000px){
+  .featured-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-inner{flex-direction:column}
+  .hero-illustration img{width:180px}
+}
+@media (max-width:600px){
+  .featured-grid{grid-template-columns:1fr}
+}
